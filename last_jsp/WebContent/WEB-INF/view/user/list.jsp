@@ -7,9 +7,6 @@
 <title>Insert title here</title>
 </head>
 <body>
-<c:forEach items="${menuList}" var="m">
-	<a href="${m.murl}">${m.mName}</a>
-	</c:forEach>
-
+유저리스트
 </body>
 </html>

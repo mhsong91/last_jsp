@@ -10,7 +10,12 @@ public class MenuServiceImpl implements MenuService{
 	MenuDAO mdao=new MenuDAOImpl();
 	@Override
 	public void getMenuList(HttpServletRequest req) {
-		req.setAttribute("menuList",mdao.selectMEnuList());
+		req.getServletContext().setAttribute("menuList",mdao.selectMEnuList());
+		
+		
+	}
+	@Override
+	public void printClassName() {
 		
 		
 	}

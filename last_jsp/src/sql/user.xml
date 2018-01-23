@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+  <mapper namespace="User">
+  <select id="selectUser" resultType="map">
+  	select uiNo,uiName,uiId,uiPwd,ciNo,address from user_info
+  </select>
+  <insert id="insertuser" parameterType="user">
+  	insert into user_info(uiNo,uiName,uiId,uiPwd,ciNo,address)
+  	value(#{uiNo},#{uiName},#{uiId},#{ciNo},#{address})
+  </insert>
+	<delete id="deleteuser" parameterType="user">
+	delete from user_info where uiNo=#{uiNo}
+</delete>
+  
+  </mapper>
