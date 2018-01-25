@@ -52,7 +52,7 @@ public class JspServlet extends HttpServlet {
 		uri=uri.replaceAll("/"+command,"");
 		command=URIParser.getCommand(uri,1);
 		UserService s=(UserService)sf.getService(command);
-		s.getUserList(req);
+//		s.getUserList(req);
 		log.debug(command);
 	}
 
